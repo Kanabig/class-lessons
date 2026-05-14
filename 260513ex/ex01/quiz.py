@@ -16,13 +16,15 @@
 # 2. 사용자에게 숫자 입력받아서
 # 1부터 입력한 숫자까지 합계 출력하기 ( 5 )
 
-# value = int(input('숫자 입력: '))
+# n = int(input("숫자 입력: "))
+
 # sum = 0
 
-# for cnt in range(1, value + 1):
+# for cnt in range(1, n + 1):
 #     sum += cnt
 
 # print(sum)
+# print(int(n * (n + 1) / 2))
 
 
 # ------------------------------------------------------------------
@@ -80,12 +82,15 @@
 
 # numList = [3, 7, 1, 9, 5]
 
-# minNum = 100
+# minNum = numList[0]
 
 # for num in numList:
 #     if num < minNum: minNum = num
 
 # print(minNum)
+
+
+# ------------------------------------------------------------------
 
 
 # 8. 1부터 100까지 숫자 중
