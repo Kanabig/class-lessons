@@ -20,17 +20,27 @@ seats = {
 5.예약 후 전체 자리 상태 다시 출력하기
 """
 
+# # FIXME: 문자열 리터럴 상수로 변환
+# OCCUPIED = "사용중"
+# FREE = "빈자리"
+
 # seats = {1: "빈자리", 2: "사용중", 3: "빈자리", 4: "사용중", 5: "빈자리"}
 
-# print(seats)
-# key = int(input("예약할 자리 번호: "))
+# for cnt, status in seats.items():
+#     print(f"[{cnt}번 자리]: {status}")
 
-# if seats[key] == "빈자리":
-#     seats[key] = "사용중"
+# bookNum = int(input("예약할 자리 번호: "))
+
+# if bookNum not in seats:
+#     print("사용중인 자리입니다.")
+# elif seats[bookNum] == FREE:
+#     seats[bookNum] = OCCUPIED
 #     print("예약 완료.")
-#     print(seats)
 # else:
 #     print("사용중인 자리입니다.")
+
+# for cnt, status in seats.items():
+#     print(f"[{cnt}번 자리]: {status}")
 
 """
 - 배달 주문 통계 프로그램
@@ -51,12 +61,11 @@ orders = [
 4. 사용자가 음식 이름 입력하면
 몇 번 주문됐는지 출력하기
 """
-# orders = ["치킨", "피자", "치킨", "햄버거", "피자", "치킨"]
-# menus = dict.fromkeys(orders)
 
+# orders = ["치킨", "피자", "치킨", "햄버거", "피자", "치킨"]
 # analysis = {}
 
-# for item in menus:
+# for item in orders:
 #     cnt = orders.count(item)
 #     analysis[item] = cnt
 
@@ -82,38 +91,32 @@ scores = {
 6.점수 높은 순으로 학생 출력 도전하기
 """
 
-student = {"민수": 88, "지훈": 72, "수아": 95, "유진": 64, "서연": 100}
-reverseDict = {}
+students = {"민수": 88, "지훈": 72, "수아": 95, "유진": 64, "서연": 100}
+reverseStudent = {}
 
-sum = 0
 maxScore = 0
-over90Count = 0
+moreThan90Cnt = 0
 highestStudent = ""
 
-for key, value in student.items():
-    sum += value
-    reverseDict[value] = key
+for name, score in students.items():
+    reverseStudent[score] = name
+    result = "합격" if score >= 60 else "불합격"
+    print(f"{name}: {score}점, {result}")
 
-    if value < 60:
-        print(f"{key}: 불합격")
-    else:
-        print(f"{key}: 합격")
+    if score >= 90:
+        moreThan90Cnt += 1
 
-    if value >= 90:
-        over90Count += 1
-
-    if maxScore < value:
-        maxScore = value
-        highestStudent = key
-
-valueLst = list(reverseDict.keys())
-valueLst.sort(reverse=True)
+# sorted_students = sorted(student.items(), key=lambda x: x[1], reverse=True)
+# for name, score in sorted_students:
+#     print(f"{name}: {score}점")
+# 중복되는 value가 있을 경우, 값이 소실될 가능성이 있다.
+scoreList = list(reverseStudent.keys())
+scoreList.sort(reverse=True)
 
 
-print(f"전체 학생 점수: {student}")
-print(f"평균: {sum / len(student.keys())}")
-print(f"최고 점수 학생: {highestStudent}")
-print(f"90점 이상인 학생 수: {over90Count}")
-print("성적 높은 학생 순: ")
-for score in valueLst:
-    print(reverseDict[score])
+print(f"\n평균: {sum(students.values()) / len(students)}")
+print(f"최고 점수 학생: {max(students, key=students.get)}")
+print(f"90점 이상인 학생 수: {moreThan90Cnt}")
+print("\n성적 높은 학생 순")
+for score in scoreList:
+    print(reverseStudent[score])
