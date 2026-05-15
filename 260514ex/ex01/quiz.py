@@ -66,8 +66,10 @@ orders = [
 # analysis = {}
 
 # for item in orders:
-#     cnt = orders.count(item)
-#     analysis[item] = cnt
+#     if item not in analysis:
+#         analysis[item] = 0
+
+#     analysis[item] += 1
 
 # print(analysis)
 
@@ -91,32 +93,33 @@ scores = {
 6.점수 높은 순으로 학생 출력 도전하기
 """
 
-students = {"민수": 88, "지훈": 72, "수아": 95, "유진": 64, "서연": 100}
-reverseStudent = {}
+# students = {"민수": 88, "지훈": 72, "수아": 95, "유진": 64, "서연": 100}
+# reverseStudent = {}
 
-maxScore = 0
-moreThan90Cnt = 0
-highestStudent = ""
+# maxScore = 0
+# moreThan90Cnt = 0
+# topScoreStudent = ""
 
-for name, score in students.items():
-    reverseStudent[score] = name
-    result = "합격" if score >= 60 else "불합격"
-    print(f"{name}: {score}점, {result}")
+# for name, score in students.items():
+#     reverseStudent[score] = name
+#     result = "합격" if score >= 60 else "불합격"
+#     print(f"{name}: {score}점, {result}")
 
-    if score >= 90:
-        moreThan90Cnt += 1
+#     if score >= 90:
+#         moreThan90Cnt += 1
 
-# sorted_students = sorted(student.items(), key=lambda x: x[1], reverse=True)
-# for name, score in sorted_students:
-#     print(f"{name}: {score}점")
-# 중복되는 value가 있을 경우, 값이 소실될 가능성이 있다.
-scoreList = list(reverseStudent.keys())
-scoreList.sort(reverse=True)
+# # sorted_students = sorted(student.items(), key=lambda x: x[1], reverse=True)
+# # for name, score in sorted_students:
+# #     print(f"{name}: {score}점")
+
+# # HACK: 중복되는 value가 있을 경우, 데이터가 소실될 가능성이 있다.
+# scoreList = list(reverseStudent.keys())
+# scoreList.sort(reverse=True)
 
 
-print(f"\n평균: {sum(students.values()) / len(students)}")
-print(f"최고 점수 학생: {max(students, key=students.get)}")
-print(f"90점 이상인 학생 수: {moreThan90Cnt}")
-print("\n성적 높은 학생 순")
-for score in scoreList:
-    print(reverseStudent[score])
+# print(f"\n평균: {sum(students.values()) / len(students)}")
+# print(f"최고 점수 학생: {max(students, key=students.get)}")
+# print(f"90점 이상인 학생 수: {moreThan90Cnt}")
+# print("\n성적 높은 학생 순")
+# for score in scoreList:
+#     print(reverseStudent[score])
