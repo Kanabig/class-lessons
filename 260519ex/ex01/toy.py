@@ -13,127 +13,183 @@
 
 """
 
+import subprocess
+
 DEV_MODE = True
 
-ADD_ACCOUNT = 1
-LOGIN = 2
-PRINT_SPECIFIC_ACCOUNT = 3
-PRINT_ALL_ACCOUNT = 4
-EXIT_PROGRAM = 99
+# ENUM
+OPT_SIGN_UP = "1"
+OPT_LOGIN = "2"
+OPT_UPDATE_USER_INFO = "3"
+OPT_PRINT_USER = "4"
+OPT_PRINT_ALL_USER = "5"
+OPT_EXIT = "99"
 
-NEED_ACCOUNT_OPTIONS = (
-    ADD_ACCOUNT,
-    LOGIN,
-    PRINT_SPECIFIC_ACCOUNT,
-)
-
-KEY_PWD = "USER_PWD"
+KEY_PW = "USER_PW"
 KEY_EMAIL = "USER_EMAIL"
 KEY_PHONE = "USER_PHONE"
+
+TXT_MENU = (
+    f"{'-' * 110}\n"
+    f" | {OPT_SIGN_UP}. 회원가입"
+    f" | {OPT_LOGIN}. 로그인"
+    f" | {OPT_UPDATE_USER_INFO}. 계정 정보 수정"
+    f" | {OPT_PRINT_USER}. 특정 회원 정보 출력"
+    f" | {OPT_PRINT_ALL_USER}. 모든 회원 정보 출력"
+    f" | {OPT_EXIT}. 종료 |\n"
+    f"{'-' * 110}\n"
+)
+
+# 아오힘들어
 
 accounts = {}
 
 
-def addAccount(id, pw, email, phone):
+def is_already_exists(id):
+    return id in accounts
+
+
+def isValidAccount(id, pw):
+    return is_already_exists(id) and (pw == accounts[id][KEY_PW])
+
+
+def createAccount(id, pw, email, phone):
     accounts[id] = {
-        KEY_PWD: pw,
+        KEY_PW: pw,
         KEY_EMAIL: email,
         KEY_PHONE: phone,
     }
 
 
-def getAccountVerification(id):
-    return (id) in accounts.keys()
+def updateAccount(id, pw, email, phone):
+    accounts[id][KEY_PW] = pw
+    accounts[id][KEY_EMAIL] = email
+    accounts[id][KEY_PHONE] = phone
 
 
-def printAllAccounts():
+def getIdInput():
+    id = input("아이디: ")
+    return id
+
+
+def getPwInput():
+    pw = input("비밀번호: ")
+    return pw
+
+
+def getEmailInput():
+    email = input("이메일: ")
+    return email
+
+
+def getPhoneNumberInput():
+    phoneNumber = input("전화번호: ")
+    return phoneNumber
+
+
+def handleSignUp():
+    id = getIdInput()
+    pw = getPwInput()
+
+    if is_already_exists(id):
+        printText("이미 존재하는 계정입니다.")
+        return
+
+    email = getEmailInput()
+    phone = getPhoneNumberInput()
+    createAccount(id, pw, email, phone)
+    printText("계정 생성이 완료되었습니다.")
+
+
+def handleLogin():
+    id = getIdInput()
+    pw = getPwInput()
+    if not isValidAccount(id, pw):
+        printText("로그인에 실패했습니다.")
+        return
+
+    printText("로그인에 성공했습니다.")
+
+
+def handlePrintUser():
+    id = getIdInput()
+    pw = getPwInput()
+
+    if not isValidAccount(id, pw):
+        printText("계정 정보 획득에 실패하셨습니다.")
+        return
+
+    print(id, accounts[id])
+    printText("계정 정보 획득에 성공했습니다.")
+
+
+def handlePrintAllUser():
     for key, value in accounts.items():
         print(key, value)
 
+    printText("모든 계정 정보가 출력되었습니다.")
 
-def makePromptText():
-    text = []
 
-    text.append(f"{ADD_ACCOUNT}.회원가입")
-    text.append(f"{LOGIN}.로그인")
-    text.append(f"{PRINT_SPECIFIC_ACCOUNT}.특정 회원 정보 출력")
-    text.append(f"{PRINT_ALL_ACCOUNT}.모든 회원 정보 출력")
-    text.append(f"{EXIT_PROGRAM}. 종료")
+def handleUpdateUser():
+    id = getIdInput()
+    pw = getPwInput()
 
-    prompt = " | ".join(text) + "\n옵션 입력: "
+    if not isValidAccount(id, pw):
+        printText("계정 정보가 틀렸습니다.")
+        return
 
-    return prompt
+    print("계정 정보를 변경합니다.")
+    pw = getPwInput()
+    email = getEmailInput()
+    phone = getPhoneNumberInput()
+
+    updateAccount(id, pw, email, phone)
+    printText("변경이 완료되었습니다.")
 
 
 if DEV_MODE:
-    addAccount("parkjungho", "1111", "apd@ansdna", "01012334556")
-    addAccount("Leeyoonho", "2222", "asdas@ggooa", "01012334556")
-    addAccount("LeeGyuchan", "3333", "nnaop@dasd", "01012334556")
-    addAccount("KimTaeJoon", "4444", "taejoon@gmail.com", "01012334556")
-    addAccount("jangdongun", "5555", "dongun@naver.com", "01012334556")
+    createAccount("1", "1", "parkjungho@gmail.com", "010-1111-1111")
+    createAccount("2", "2", "parkjungho@gmail.com", "010-2222-2222")
+    # createAccount("parkjungho", "1111", "parkjungho@gmail.com", "01012334556")
+    # createAccount("Leeyoonho", "2222", "yunho@kakao.com", "01012334556")
+    # createAccount("LeeGyuchan", "3333", "gyuchan@dasd@daum.net", "01012334556")
+    # createAccount("KimTaeJoon", "4444", "taejoon@naver.com", "01012334556")
+    # createAccount("jangdongeun", "5555", "dongeun@nate.com", "01012334556")
+
+
+def printText(text):
+    print(text, end="")
 
 
 isRunning = True
-prompt = makePromptText()
-
-# while isRunning:
-#     selected_opt = int(input(prompt))
-
-#     if selected_opt == EXIT_PROGRAM:
-#         isRunning = False
-
-#     elif selected_opt == PRINT_ALL_ACCOUNT:
-#         printAllAccounts()
-
-#     elif selected_opt in NEED_ACCOUNT_OPTIONS:
-#         id = input("아이디: ")
-
-#         if selected_opt == PRINT_SPECIFIC_ACCOUNT:
-#             if getAccountVerification(id):
-#                 print(id, accounts[id])
-#             else:
-#                 print("이 계정은 없는 계정입니다.")
-#                 continue
-
-#         pw = input("비밀번호: ")
-
-#         if selected_opt == ADD_ACCOUNT:
-#             if getAccountVerification(id):
-#                 print("이미 있는 계정입니다.")
-#                 continue
-
-#             email = input("Email: ")
-#             phone = input("Phone Number(-제외): ")
-#             addAccount(id, pw, email, phone)
-
-#         elif selected_opt == LOGIN:
-#             if getAccountVerification(id):
-#                 print("성공")
-#             else:
-#                 print("실패")
 
 while isRunning:
-    selected_opt = int(input(prompt))
-    if selected_opt == EXIT_PROGRAM:
-        isRunning = False
+    subprocess.run("clear")
+    printText(TXT_MENU)
+    selected = input("옵션 입력: ")
 
-    elif selected_opt == PRINT_ALL_ACCOUNT:
-        printAllAccounts()
+    if OPT_SIGN_UP == selected:
+        handleSignUp()
+
+    elif OPT_LOGIN == selected:
+        handleLogin()
+
+    elif OPT_UPDATE_USER_INFO == selected:
+        handleUpdateUser()
+
+    elif OPT_PRINT_USER == selected:
+        handlePrintUser()
+
+    elif OPT_PRINT_ALL_USER == selected:
+        handlePrintAllUser()
+
+    elif OPT_EXIT == selected:
+        isRunning = False
+        continue
 
     else:
-        id = input("아이디: ")
-        pw = input("비밀번호: ")
+        printText("정해진 옵션을 선택해 주십시오.")
 
-        if selected_opt == ADD_ACCOUNT:
-            email = input("Email: ")
-            phone = input("Phone Number(-제외): ")
-            addAccount(id, pw, email, phone)
+    input()
 
-        elif selected_opt == LOGIN:
-            if getAccountVerification(id, pw):
-                print("성공")
-            else:
-                print("실패")
-
-        elif selected_opt == PRINT_SPECIFIC_ACCOUNT:
-            print(id, pw, accounts[(id, pw)])
+printText("프로그램이 종료되었습니다.")
