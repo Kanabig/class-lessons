@@ -45,12 +45,12 @@ TXT_MENU = (
 accounts = {}
 
 
-def is_already_exists(id):
+def isAlreadyExists(id):
     return id in accounts
 
 
 def isValidAccount(id, pw):
-    return is_already_exists(id) and (pw == accounts[id][KEY_PW])
+    return isAlreadyExists(id) and (pw == accounts[id][KEY_PW])
 
 
 def createAccount(id, pw, email, phone):
@@ -91,7 +91,7 @@ def handleSignUp():
     id = getIdInput()
     pw = getPwInput()
 
-    if is_already_exists(id):
+    if isAlreadyExists(id):
         printText("이미 존재하는 계정입니다.")
         return
 
