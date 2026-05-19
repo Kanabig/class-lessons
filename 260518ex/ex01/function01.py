@@ -73,38 +73,38 @@
 # printIntroText(selectedOpt)
 
 
-# def calc(num1, num2, operator):
+# def calc(left, right, operator):
 #     match (operator):
 #         case "+":
-#             return add(num1, num2)
+#             return add(left, right)
 #         case "-":
-#             return sub(num1, num2)
+#             return sub(left, right)
 #         case "*":
-#             return mul(num1, num2)
+#             return mul(left, right)
 #         case _:
-#             return div(num1, num2)
+#             return div(left, right)
 
 
-# def add(num1, num2):
-#     return num1 + num2
+# def add(left, right):
+#     return left + right
 
 
-# def sub(num1, num2):
-#     return num1 - num2
+# def sub(left, right):
+#     return left - right
 
 
-# def mul(num1, num2):
-#     return num1 * num2
+# def mul(left, right):
+#     return left * right
 
 
-# def div(num1, num2):
-#     return num1 / num2
+# def div(left, right):
+#     return left / right
 
 
-# inputs = input("숫자와 연산자를 입력하세요(ex:1 + 1) : ")
-# num1, operator, num2 = inputs.split()
+# inputs = input("숫자와 연산자를 입력하세요(ex:1+1) : ")
+# left, operator, right = inputs
 
-# print(calc(float(num1), float(num2), operator))
+# print(calc(float(left), float(right), operator))
 
 
 # def makeReceipt(menus):
