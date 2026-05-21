@@ -13,11 +13,11 @@
 
 """
 
+# 공부한 내용까지만 이용해서 작성하기
 import subprocess
 
 DEV_MODE = True
 
-# ENUM
 OPT_SIGN_UP = "1"
 OPT_LOGIN = "2"
 OPT_UPDATE_USER_INFO = "3"
@@ -85,6 +85,10 @@ def getEmailInput():
 def getPhoneNumberInput():
     phoneNumber = input("전화번호: ")
     return phoneNumber
+
+
+def printText(text):
+    print(text, end="")
 
 
 def handleSignUp():
@@ -156,11 +160,6 @@ if DEV_MODE:
     # createAccount("KimTaeJoon", "4444", "taejoon@naver.com", "01012334556")
     # createAccount("jangdongeun", "5555", "dongeun@nate.com", "01012334556")
 
-
-def printText(text):
-    print(text, end="")
-
-
 isRunning = True
 
 while isRunning:
@@ -193,3 +192,5 @@ while isRunning:
     input()
 
 printText("프로그램이 종료되었습니다.")
+
+# https://github.com/hohasic/python_ex/tree/main/20260519ex/ex001
