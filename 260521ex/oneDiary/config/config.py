@@ -1,0 +1,8 @@
+OPT_SIGN_UP = "1"
+OPT_SIGN_IN = "2"
+OPT_SIGN_OUT = "3"
+OPT_MODIFY = "4"
+OPT_DELETE = "5"
+OPT_CLOSE = "0"
+
+DEBUG_MODE = True
