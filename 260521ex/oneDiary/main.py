@@ -163,6 +163,11 @@ def matchOptActions():
     addAction(signInActions, config.OPT_CLOSE, close)
 
 
+def selectAction(actions, selected):
+    action = actions.get(selected, None)
+    action() if action else print("out of bounds")
+
+
 # session.signInedMemberId = "park
 member_dummy.dummyInit()
 matchOptActions()
@@ -174,14 +179,10 @@ while onRunning:
     if session.signInedMemberId == "":
         mainDisplay()
         selected = input("옵션을 선택하세요: ")
-
-        action = signOutActions.get(selected, None)
-        action() if action else print("out of bounds")
+        selectAction(signOutActions, selected)
 
     # on sign-in
     else:
         signInDisplay()
         selected = input("옵션을 선택하세요: ")
-
-        action = signInActions.get(selected, None)
-        action() if action else print("out of bounds")
+        selectAction(signInActions, selected)
