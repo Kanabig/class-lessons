@@ -1,8 +1,19 @@
 OPT_SIGN_UP = "1"
 OPT_SIGN_IN = "2"
+
 OPT_SIGN_OUT = "3"
 OPT_MODIFY = "4"
 OPT_DELETE = "5"
+
+OPT_WRITE = "6"
+OPT_READ = "7"
+
 OPT_CLOSE = "0"
 
+DIARY_TEXT_LIMIT = 10
 DEBUG_MODE = True
+
+KEY_ID = "id"
+KEY_PW = "pw"
+KEY_MAIL = "mail"
+KEY_PHONE = "phone"
