@@ -1,0 +1,78 @@
+response: {
+        "lastBuildDate":"Wed, 27 May 2026 10:37:50 +0900",
+        "total":3783968,
+        "start":1,
+        "display":10,
+        "items":[
+                {
+                        "title":"대전과기대, 대동제 성료...국제요리대회 장관상까지 '겹경사'",
+                        "originallink":"http:\/\/www.ccnnews.co.kr\/news\/articleView.html?idxno=410100",
+                        "link":"http:\/\/www.ccnnews.co.kr\/news\/articleView.html?idxno=410100",
+                        "description":"축제 첫날인 대전 지역에 많은 비가 내리는 궂은 <b>날씨<\/b>였음에도 불구하고 수많은 재학생이 우산을 쓰고 현장을 찾아 축제 열기를 지폈다. 특히 우천이라는 악조건 속에서도 동아리 공연과 다채로운 소통 프로그램들이... ",
+                        "pubDate":"Wed, 27 May 2026 10:36:00 +0900"
+                },
+                {
+                        "title":"[전국 오늘의 <b>날씨<\/b> 및 내일<b>날씨<\/b>]오늘~내일 전국 곳에 따라 비, 소강상태...",
+                        "originallink":"http:\/\/www.economytalk.kr\/news\/articleView.html?idxno=421574",
+                        "link":"http:\/\/www.economytalk.kr\/news\/articleView.html?idxno=421574",
+                        "description":"+주요지역별 <b>날씨<\/b>전망(5월 27일부터 30일까지. 기상청 예보 전문) *서울-인천-경기도 ○ 내일 낮까지 서울.... *전국 중기 <b>날씨<\/b> 전망(5월 30일부터 6월 5일까지)전국 대체로 맑거나 구름많겠음! 30일(토)~6월 1일(월)은... ",
+                        "pubDate":"Wed, 27 May 2026 10:34:00 +0900"
+                },
+                {
+                        "title":"알파드라이브원, '오엠지!' 日 라인뮤직 2위…K팝 그룹 최고 순위",
+                        "originallink":"https:\/\/www.slist.kr\/news\/articleView.html?idxno=741567",
+                        "link":"https:\/\/www.slist.kr\/news\/articleView.html?idxno=741567",
+                        "description":"멤버들은 변화무쌍한 <b>날씨<\/b> 속에서 세탁소에서 세탁을 기다리거나 우비를 입고 등장하고, 보드샵에서... 예측하기 어려운 <b>날씨<\/b>처럼 변화하는 소년들의 마음과 고조되는 감정을 담았다. 수록곡 'Good Life'는... ",
+                        "pubDate":"Wed, 27 May 2026 10:34:00 +0900"
+                },
+                {
+                        "title":"[뉴스타임<b>날씨<\/b>] 오후까지 비 조금…더위 주춤",
+                        "originallink":"https:\/\/news.kbs.co.kr\/news\/pc\/view\/view.do?ncd=8570933&ref=A",
+                        "link":"https:\/\/n.news.naver.com\/mnews\/article\/056\/0012188624?sid=103",
+                        "description":"서울이 24, 강릉 20, 청주와 대전 26, 광주 27, 대구 23도로 어제보다 크게는 10도 가까이 낮겠습니다. 오늘은 서해와 동해상을 중심으로 바다 안개가 짙게 끼겠습니다. <b>날씨<\/b> 전해드렸습니다. 이설아 기상캐스터\/그래픽:김현서",
+                        "pubDate":"Wed, 27 May 2026 10:30:00 +0900"
+                },
+                {
+                        "title":"[28일(목) 한라산 <b>날씨<\/b>] 최고 100% 습도 속 비 소식 없는 흐리고 선선한...",
+                        "originallink":"https:\/\/www.pointdaily.co.kr\/news\/articleView.html?idxno=306146",
+                        "link":"https:\/\/www.pointdaily.co.kr\/news\/articleView.html?idxno=306146",
+                        "description":"선선한 <b>날씨<\/b>가 나타나겠다. 하루 동안 하늘은 대체로 흐린 상태가 지배적으로 이어지겠으나, 비 소식은... ▲시간대별 <b>날씨<\/b> 변화 0시부터 6시까지는 하늘이 흐리겠고, 9시에는 구름이 조금 끼겠다. 이후 12시와... ",
+                        "pubDate":"Wed, 27 May 2026 10:26:00 +0900"
+                },
+                {
+                        "title":"초조한 히틀러가 예상하지 못한 한 가지",
+                        "originallink":"https:\/\/www.ohmynews.com\/NWS_Web\/View\/at_pg.aspx?CNTN_CD=A0003237383&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+                        "link":"https:\/\/m.entertain.naver.com\/article\/047\/0002517217",
+                        "description":"설상가상 독일이 예상하지 못한 또 다른 변수는 소련의 '<b>날씨<\/b>'였다. 모스크바로 진격한 독일 기갑군은 해빙기와 폭우로 도로가 진흙탕이 되는 라스푸티차 현상으로 인하여 진군과 보급품수송에 애를 먹었다. 여기에... ",
+                        "pubDate":"Wed, 27 May 2026 10:26:00 +0900"
+                },
+                {
+                        "title":"[조재선 평화칼럼] 시대의 잔상, 오늘의 학교",
+                        "originallink":"https:\/\/news.cpbc.co.kr\/article\/1173168?division=NAVER",
+                        "link":"https:\/\/news.cpbc.co.kr\/article\/1173168?division=NAVER",
+                        "description":"책 앞머리에는 교장이 석탄과 장작을 팔아먹어 아이들이 추운 <b>날씨<\/b>에 벌벌 떠는 이야기가 나온다. 선생님들이 가정 방문을 다니며 학부모들에게 담배나 현금을 ‘선물’로 받는 장면도 나온다. 육성회비는 재적생 중 일정... ",
+                        "pubDate":"Wed, 27 May 2026 10:26:00 +0900"
+                },
+                {
+                        "title":"'오늘 드림' 5월 27일 카드뉴스",
+                        "originallink":"http:\/\/www.gjdream.com\/news\/articleView.html?idxno=669739",
+                        "link":"http:\/\/www.gjdream.com\/news\/articleView.html?idxno=669739",
+                        "description":"통합교육감 선거 난타전 조선업 호황의 역설...노동자들은 왜 웃지 못하나 전남 서남부 경제, 회복 신호 속 그늘도 짙다 완도 약산 해안치유의 숲서 '힐링' 제대로 광주 청소년들 직접 빚은 5·18 모자상 전시 오늘 광주 <b>날씨<\/b>",
+                        "pubDate":"Wed, 27 May 2026 10:24:00 +0900"
+                },
+                {
+                        "title":"알파드라이브원, 아시아·유럽 아이튠즈 톱5 안착",
+                        "originallink":"https:\/\/sports.khan.co.kr\/article\/202605271019003?pt=nv",
+                        "link":"https:\/\/m.entertain.naver.com\/article\/144\/0001117558",
+                        "description":"뮤직비디오 역시 예측할 수 없는 <b>날씨<\/b> 속에서 펼쳐지는 상황들을 통해 자유롭고도 찬란한 청춘의 순간들을 감각적으로 표현하며, 곡이 지닌 메시지를 한층 입체적으로 완성했다. 알파드라이브원의 프롤로그 싱글... ",
+                        "pubDate":"Wed, 27 May 2026 10:20:00 +0900"
+                },
+                {
+                        "title":"연암대, 초등학교 텃밭을 ‘스마트텃밭’으로",
+                        "originallink":"https:\/\/dhnews.co.kr\/news\/view\/1065575695155734",
+                        "link":"https:\/\/dhnews.co.kr\/news\/view\/1065575695155734",
+                        "description":"향남초등학교 김진환 교사는 “무더운 <b>날씨<\/b>에도 매일 물을 주는 일이 학교 차원에서는 큰 부담이었는데, 채상헌 교수님과 연암대 학생들 덕분에 큰 선물을 받은 것 같다”고 감사의 마음을 전했다. 이어 “스마트... ",
+                        "pubDate":"Wed, 27 May 2026 10:18:00 +0900"
+                }
+        ]
+}
